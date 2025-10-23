@@ -1,80 +1,93 @@
 <section class="main-content w-full px-[var(--margin-x)] pb-8">
-    <div class="mt-12 text-center">
-      <div class="avatar size-16">
-        <div class="is-initial rounded-full bg-gradient-to-br from-pink-500 to-rose-500 text-white">
-          <i class="fa-solid fa-shapes text-2xl"></i>
-        </div>
+  <!-- Dashboard Header -->
+  <div class="mt-12 text-center">
+    <div class="avatar size-16">
+      <div class="is-initial rounded-full bg-gradient-to-br from-blue-500 to-indigo-500 text-white">
+        <i class="fa-solid fa-chart-line text-2xl"></i>
       </div>
-      <h3 class="mt-3 text-xl font-semibold text-slate-600 dark:text-navy-100">
-        Raki Applications
-      </h3>
-      <p class="mt-0.5 text-base">
-        List of prebuilt applications of Raki
-      </p>
     </div>
-    <div class="mx-auto mt-8 grid w-full max-w-4xl grid-cols-1 gap-4 sm:grid-cols-2 sm:gap-5 lg:gap-6">
-      <div class="card p-4 sm:p-5">
-        <div class="avatar size-12">
-          <div class="is-initial rounded-full bg-info text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2">
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
-              />
-            </svg>
-          </div>
-        </div>
-        <h2 class="mt-5 text-base font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">
-          Chat App
-        </h2>
-        <p class="mt-1">
-          Lineone prebuilt Messaging UI kit includes designs for social
-          chat.
-        </p>
-        <div class="mt-5 pb-1">
-          <a
-            href="apps-chat.html"
-            class="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-hidden transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70"
-            >View Application</a>
+    <h3 class="mt-3 text-xl font-semibold text-slate-700 dark:text-navy-100">
+      Verification Dashboard
+    </h3>
+    <p class="mt-0.5 text-base text-slate-500 dark:text-navy-200">
+      Overview of document and ID verification status powered by Raki
+    </p>
+  </div>
+
+  <!-- Summary Cards -->
+  <div class="mx-auto mt-10 grid w-full max-w-5xl grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 sm:gap-5 lg:gap-6">
+
+    <!-- Documents: Verified -->
+    <div class="card flex flex-col items-center p-5">
+      <div class="avatar size-12">
+        <div class="is-initial rounded-full bg-success text-white">
+          <i class="fa-solid fa-file-circle-check text-xl"></i>
         </div>
       </div>
-      <div class="card p-4 sm:p-5">
-        <div class="avatar size-12">
-          <div class="is-initial rounded-full bg-warning text-white">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              class="size-6"
-              fill="none"
-              viewBox="0 0 24 24"
-              stroke="currentColor"
-              stroke-width="2"
-            >
-              <path
-                stroke-linecap="round"
-                stroke-linejoin="round"
-                d="M9 17V7m0 10a2 2 0 01-2 2H5a2 2 0 01-2-2V7a2 2 0 012-2h2a2 2 0 012 2m0 10a2 2 0 002 2h2a2 2 0 002-2M9 7a2 2 0 012-2h2a2 2 0 012 2m0 10V7m0 10a2 2 0 002 2h2a2 2 0 002-2V7a2 2 0 00-2-2h-2a2 2 0 00-2 2"
-              />
-            </svg>
-          </div>
-        </div>
-        <h2 class="mt-5 text-base font-medium tracking-wide text-slate-700 line-clamp-1 dark:text-navy-100">
-          Kanban Board
-        </h2>
-        <p class="mt-1">
-          The Kanban Board to keep track of your personal and work tasks.
-        </p>
-        <div class="mt-5 pb-1">
-          <a
-            href="apps-kanban.html"
-            class="border-b border-dashed border-current pb-0.5 font-medium text-primary outline-hidden transition-colors duration-300 hover:text-primary/70 focus:text-primary/70 dark:text-accent-light dark:hover:text-accent-light/70 dark:focus:text-accent-light/70"
-            >View Application</a>
+      <p class="mt-3 text-base font-medium text-slate-600 dark:text-navy-100">
+        Documents Verified
+      </p>
+      <h2 class="text-3xl font-bold text-success mt-1">128</h2>
+      <p class="text-xs text-slate-400 mt-1">Verified via Raki</p>
+    </div>
+
+    <!-- Documents: Pending -->
+    <div class="card flex flex-col items-center p-5">
+      <div class="avatar size-12">
+        <div class="is-initial rounded-full bg-warning text-white">
+          <i class="fa-solid fa-file-circle-question text-xl"></i>
         </div>
       </div>
-    </section>
+      <p class="mt-3 text-base font-medium text-slate-600 dark:text-navy-100">
+        Pending Documents
+      </p>
+      <h2 class="text-3xl font-bold text-warning mt-1">24</h2>
+      <p class="text-xs text-slate-400 mt-1">Awaiting approval</p>
+    </div>
+
+    <!-- IDs: Verified -->
+    <div class="card flex flex-col items-center p-5">
+      <div class="avatar size-12">
+        <div class="is-initial rounded-full bg-info text-white">
+          <i class="fa-solid fa-id-card-clip text-xl"></i>
+        </div>
+      </div>
+      <p class="mt-3 text-base font-medium text-slate-600 dark:text-navy-100">
+        IDs Verified
+      </p>
+      <h2 class="text-3xl font-bold text-info mt-1">89</h2>
+      <p class="text-xs text-slate-400 mt-1">Validated via Raki</p>
+    </div>
+
+    <!-- IDs: Pending -->
+    <div class="card flex flex-col items-center p-5">
+      <div class="avatar size-12">
+        <div class="is-initial rounded-full bg-error text-white">
+          <i class="fa-solid fa-id-card text-xl"></i>
+        </div>
+      </div>
+      <p class="mt-3 text-base font-medium text-slate-600 dark:text-navy-100">
+        Pending ID Verification
+      </p>
+      <h2 class="text-3xl font-bold text-error mt-1">15</h2>
+      <p class="text-xs text-slate-400 mt-1">For manual review</p>
+    </div>
+
+  </div>
+
+  <!-- Optional: Section link buttons -->
+  <div class="mt-10 flex justify-center gap-4">
+    <a
+      href="docs-requirements.html"
+      class="btn bg-success/10 text-success hover:bg-success/20"
+    >
+      View Documents
+    </a>
+    <a
+      href="ids-requirements.html"
+      class="btn bg-info/10 text-info hover:bg-info/20"
+    >
+      View IDs
+    </a>
+  </div>
+</section>
