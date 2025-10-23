@@ -35,4 +35,10 @@ return [
         ],
     ],
 
+    'google2fa' => [
+        'enabled' => env('GOOGLE2FA_ENABLED', true),
+        'secret' => env('GOOGLE2FA_SECRET'),
+    ],
+
+
 ];
