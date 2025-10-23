@@ -3,7 +3,7 @@
 <head>
     <title>@yield('title')</title>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"/>
     <meta name="csrf-token" content="{{ csrf_token() }}">
     <link rel="preconnect" href="https://fonts.googleapis.com/" />
     <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin />
@@ -15,8 +15,9 @@
     <div class="min-h-100vh flex  justify-center grow bg-slate-50 dark:bg-navy-900" x-cloak>
       <x-sidemenu/>
       <x-navigation/>
-      <main class="flex-1 mt-[8.5rem]">
-        {{ $slot }}
+      <main class="flex-1 mt-10">
+        @yield('content')
+        {{-- {{ $slot }} --}}
       </main>
       @livewireScripts
     </div>
