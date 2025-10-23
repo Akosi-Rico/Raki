@@ -46,7 +46,7 @@ class TwoFactorController  extends Controller
         $google2fa = new Google2FA();
         $user = auth()->user();
 
-        if ($google2fa->verifyKey($user->google2fa_secret, $request->input('2fa_code'), 2)) {
+        if ($google2fa->verifyKey($user->google2fa_secret, $request->input('2fa_code'))) {
             // Authentication successful, proceed to user dashboard or other logic
             return redirect()->intended('/home');
         }
